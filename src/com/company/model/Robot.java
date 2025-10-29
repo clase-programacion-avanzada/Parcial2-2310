@@ -1,6 +1,7 @@
 package com.company.model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Robot {
@@ -14,6 +15,28 @@ public class Robot {
         this.codigo = codigo;
         this.pesoMaximo = pesoMaximo;
         this.componentes = new ArrayList<>();
+    }
+
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    public double getPesoMaximo() {
+        return pesoMaximo;
+    }
+
+    public void setPesoMaximo(double pesoMaximo) {
+        this.pesoMaximo = pesoMaximo;
+    }
+
+    public List<Componente> getComponentes() {
+        // El uso de Collections.unmodifiableList es opcional
+        return Collections.unmodifiableList(componentes);
     }
 
     public void agregarComponente(int id, String nombre, double peso){
@@ -53,23 +76,5 @@ public class Robot {
 
     }
 
-    public String getCodigo() {
-        return codigo;
-    }
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
-    }
-
-    public double getPesoMaximo() {
-        return pesoMaximo;
-    }
-
-    public void setPesoMaximo(double pesoMaximo) {
-        this.pesoMaximo = pesoMaximo;
-    }
-
-    public List<Componente> getComponentes() {
-        return componentes;
-    }
 }
