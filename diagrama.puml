@@ -1,0 +1,19 @@
+@startuml
+class Catalogo {
+
+}
+
+class Robot {
+- String codigo
+- double pesoMaximo
+  }
+
+class Componente {
+- int id
+- String nombre
+- double peso
+  }
+
+Catalogo  o-> Robot : catalogoDeRobots
+Robot *- Componente : componentes
+@enduml
